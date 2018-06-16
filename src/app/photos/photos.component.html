@@ -1,0 +1,23 @@
+<div class="header">
+    <span class="glyphicon glyphicon-chevron-left" style="float:left;" (click)="gotoalbumpage()"></span>
+    <b>Welcome In User Page</b>
+  </div><br>
+  
+  <div *ngFor="let res of result;let i= index" class="tbldiv" >
+  <table class="table tbl" (click)="GotoAlbums(i+1)" *ngIf="i<5">
+    <tbody>
+        <tr>
+            <th>albumId:</th>
+            <td>{{res.id}}</td>
+          </tr>
+      <tr>
+        <th>thumbnailUrl:</th>
+        <td><img src="{{res.thumbnailUrl}}"></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+  
+  
+  

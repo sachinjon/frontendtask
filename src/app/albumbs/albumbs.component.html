@@ -1,0 +1,26 @@
+<div class="header">
+    <span class="glyphicon glyphicon-chevron-left" style="float:left;" (click)="gotouserpage()"></span>
+    <b>Welcome In Albums Page</b>
+  </div><br>
+  
+  <div *ngFor="let res of result;let i= index" class="tbldiv">
+  <table class="table tbl" (click)="Gotophotos(i+1)">
+    <tbody>
+        <tr>
+            <th>albumId:</th>
+            <td>{{res.userId}}</td>
+          </tr>
+      <tr>
+        <th>id:</th>
+        <td>{{res.id}}</td>
+      </tr>
+      <tr>
+        <th>title:</th>
+        <td>{{res.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  
+  
+  
